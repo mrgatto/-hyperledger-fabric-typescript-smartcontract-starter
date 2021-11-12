@@ -1,0 +1,1 @@
+# Hyperledger Fabric 2.2 Typescript SmartContract Starter

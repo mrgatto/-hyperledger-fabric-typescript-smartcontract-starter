@@ -1,1 +1,1 @@
-# Hyperledger Fabric 2.2 Typescript SmartContract Starter
+# Hyperledger Fabric 2.2 typescript smart contract starter

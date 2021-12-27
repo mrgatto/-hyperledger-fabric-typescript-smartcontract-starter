@@ -18,9 +18,9 @@ npm install
 npm run test
 ```
 
-## Linter
+### Linter
 
-Use TSLint
+Run TSLint:
 
 ```bash
 npm run lint

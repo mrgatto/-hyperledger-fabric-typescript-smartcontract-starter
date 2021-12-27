@@ -1,7 +1,8 @@
 {
-  "name": "sample_contract",
+  "name": "sample-contract",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample Hyperledger 2.2 Smart Contract",
+  "license": "ISC",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -13,8 +14,6 @@
     "build:watch": "tsc -w"
   },
   "engineStrict": true,
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "fabric-contract-api": "^2.2.0",
     "fabric-shim": "^2.2.0"

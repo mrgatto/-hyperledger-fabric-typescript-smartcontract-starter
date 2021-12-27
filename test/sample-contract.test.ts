@@ -2,8 +2,8 @@ import { assert } from 'chai'
 import { Context } from 'fabric-contract-api'
 import { ChaincodeStub } from 'fabric-shim'
 import { describe, it } from "mocha"
+import * as sinon from 'sinon'
 import { SinonStubbedInstance } from 'sinon'
-import * as sinon from 'sinon';
 import { SampleAsset } from '../src/assets/sample-asset'
 import { SampleContract } from '../src/sample-contract'
 

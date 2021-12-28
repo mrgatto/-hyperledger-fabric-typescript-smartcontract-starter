@@ -21,7 +21,7 @@ export class SampleContract extends Contract {
         console.log(`Transaction ${txid} from ${caller}: ${fnc}`);
     }
 
-    public async getKeyValue(ctx: Context, key): Promise<string> {
+    public async getKeyValue(ctx: Context, key: string): Promise<string> {
         console.log(`getKeyValue(${key})`);
 
         const objectBytes = await ctx.stub.getState(key);
@@ -66,7 +66,7 @@ export class SampleContract extends Contract {
         return JSON.stringify(objects);
     }
 
-    public async getKeyHistory(ctx, key): Promise<string> {
+    public async getKeyHistory(ctx: Context, key: string): Promise<string> {
         console.log(`getHistory(${key})`);
 
         const objects = [];
@@ -76,7 +76,7 @@ export class SampleContract extends Contract {
             const obj = {
                 tx: value.txId,
                 value: JSON.parse(value.value.toString()),
-                when: this._toDate(value.timestamp).toISOString(),
+                when: this.toDate(value.timestamp).toISOString(),
             };
 
             objects.push(obj);
@@ -85,7 +85,7 @@ export class SampleContract extends Contract {
         return JSON.stringify(objects);
     }
 
-    private _toDate(timestamp) {
+    private toDate(timestamp): Date {
         const milliseconds = (timestamp.seconds.low
             + ((timestamp.nanos / 1000000) / 1000)) * 1000;
         return new Date(milliseconds);
